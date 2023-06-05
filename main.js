@@ -1,12 +1,18 @@
-const jokes = document.querySelector(".jokes-body");
-const button = document.querySelector("#get-jok-btn");
+const joke = document.getElementById("joke");
+const btn = document.getElementById("bTn");
 
-const API_URL = "https://api.chucknorris.io/jokes/random";
+btn.addEventListener("click", getJoke);
 
-const getJoke = async () => {
-  const response = await fetch(API_URL);
-  const joke = await response.json();
-  jokes.innerHTML = joke.value;
-};
+async function getJoke() {
+  const value = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
 
-button.addEventListener("click", getJoke);
+  const response = await fetch("https://icanhazdadjoke.com", value);
+
+  const data = await response.json();
+
+  joke.innerHTML = data.joke;
+}
