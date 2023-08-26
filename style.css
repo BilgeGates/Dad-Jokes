@@ -1,18 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 body {
+  background-color: #686de0;
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #686de0;
   height: 100vh;
+  overflow: hidden;
+  padding: 20px;
 }
 
 .container {
@@ -25,12 +28,10 @@ body {
   width: 800px;
 }
 
-.challenge {
+h3 {
   margin: 0;
   opacity: 0.5;
   letter-spacing: 2px;
-  font-size: 1.17rem;
-  font-weight: bold;
 }
 
 .joke {
@@ -44,7 +45,7 @@ body {
 .btn {
   background-color: #9f68e0;
   color: #fff;
-  border: none;
+  border: 0;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
   padding: 14px 40px;
